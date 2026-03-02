@@ -1,69 +1,69 @@
-# 🚀 Autoflex Inventory System
+# 🚀 Autoflex Inventory & Production System
 
-Este projeto é uma solução completa de **Gestão de Inventário e Planejamento de Produção** desenvolvida como teste técnico para a Autoflex. O sistema permite o controle rigoroso de insumos e a otimização da produção industrial com base no estoque disponível.
-
----
-
-## 📋 Descrição do Problema
-O desafio consistia em criar uma plataforma que gerenciasse o estoque de matérias-primas e sugerisse o plano de produção ideal. O diferencial técnico está na **priorização inteligente**: o sistema calcula a produção máxima priorizando sempre os produtos de maior valor agregado, garantindo o melhor retorno financeiro para a empresa.
-
-## ✨ Funcionalidades Principais
-
-* **Controle de Insumos (Raw Materials):** Cadastro e gestão de quantidades em estoque de cada matéria-prima.
-* **Gestão de Produtos:** Cadastro de produtos finais com seus respectivos valores de mercado.
-* **Receituário Dinâmico (Recipes):** Associação de múltiplas matérias-primas para a composição de um único produto.
-* **Dashboard de Produção:** Interface que lista o plano de produção sugerido e o faturamento total estimado.
-* **Baixa Automática de Estoque:** Ao confirmar a produção, o sistema realiza a subtração automática dos insumos no banco de dados.
-* **Histórico de Produção:** Registro de todos os ciclos de produção realizados, com data, hora e valores.
-* **Exportação em PDF:** Geração de relatórios profissionais das ordens de produção e histórico.
+A comprehensive **Inventory Management and Production Planning** solution developed as a technical assessment for Autoflex. The system provides precise control over raw materials and optimizes manufacturing output based on real-time stock availability.
 
 ---
 
-## 🛠️ Tecnologias e Arquitetura
+## 📋 Problem Description
+The challenge was to build a platform that manages raw material inventory and suggests an ideal production plan. The core technical differentiator is the **Smart Prioritization Logic**: the system calculates maximum production by prioritizing high-value products first, ensuring the best financial return for the operation.
 
-O projeto foi construído seguindo os mais altos padrões de desenvolvimento exigidos:
+## ✨ Key Features
 
-* **Back-end (API):** Desenvolvido com **Java 17** e **Spring Boot**, utilizando JPA/Hibernate para persistência.
-* **Front-end:** Construído com **Next.js (React)**, garantindo uma interface rápida e moderna.
-* **Banco de Dados:** Utilização do **PostgreSQL** (hospedado via Neon Console).
-* **Estilização:** **Tailwind CSS** para garantir responsividade total em dispositivos móveis e desktops.
-* **Documentação:** Implementação de **Swagger (OpenAPI)** para facilitar a integração e testes da API.
-
----
-
-## 🏗️ Atendimento aos Requisitos (RNFs e RFs)
-
-O sistema atende integralmente aos requisitos propostos:
-* **RNF007:** Toda a codificação (variáveis, classes, tabelas) foi realizada em **Língua Inglesa**.
-* **RNF002:** Separação clara entre **Back-end (API)** e **Front-end**.
-* **RF004:** Lógica de sugestão de produção baseada estritamente no estoque e priorização por valor.
+* **Raw Material Management:** Full CRUD operations and real-time stock balance tracking.
+* **Product Management:** Complete CRUD for final products including market value definition.
+* **Dynamic Recipes:** Association of multiple raw materials to a single product with specific required quantities.
+* **Production Dashboard:** Interactive interface listing the suggested production plan and estimated total revenue.
+* **Automatic Stock Deduction:** Upon confirmation, the system automatically subtracts the consumed materials from the PostgreSQL database.
+* **Production History:** Persistent logging of every production cycle, including timestamps, quantities, and generated revenue.
+* **PDF Exporting:** Generation of professional PDF reports for production orders and historical audits.
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🛠️ Tech Stack & Architecture
 
-1.  **Clone o repositório:**
+The project follows high-standard development requirements:
+
+* **Back-end (API):** Built with **Java 17** and **Spring Boot**, using JPA/Hibernate for persistence.
+* **Front-end:** Developed with **Next.js (React)** for a fast, modern user experience.
+* **Database:** **PostgreSQL** (hosted via Neon Console).
+* **Styling:** **Tailwind CSS** for full responsiveness across mobile and desktop devices.
+* **API Documentation:** **Swagger (OpenAPI)** implementation for easy endpoint testing and integration.
+
+---
+
+## 🏗️ Requirements Compliance (RNFs & RFs)
+
+The system fully meets the assessment criteria:
+* **RNF007:** All coding (variables, classes, tables) is written in **English**.
+* **RNF002:** Clear decoupling between **Back-end (API)** and **Front-end**.
+* **RF004:** Production suggestion logic based strictly on stock levels and value-based prioritization.
+
+---
+
+## 🚀 Getting Started
+
+1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/seu-usuario/autoflex-inventory.git](https://github.com/seu-usuario/autoflex-inventory.git)
+    git clone [https://github.com/your-username/autoflex-inventory.git](https://github.com/your-username/autoflex-inventory.git)
     ```
 
-2.  **Back-end:**
-    * Certifique-se de ter o **JDK 17** instalado.
-    * Configure as credenciais do banco no `application.properties`.
-    * Execute via IntelliJ ou terminal: `./mvnw spring-boot:run`.
+2.  **Back-end Setup:**
+    * Ensure **JDK 17** is installed.
+    * Configure database credentials in `application.properties`.
+    * Run via IDE or terminal: `./mvnw spring-boot:run`.
 
-3.  **Front-end:**
-    * Navegue até a pasta do front-end.
-    * Instale as dependências: `npm install`.
-    * Inicie o servidor de desenvolvimento: `npm run dev`.
+3.  **Front-end Setup:**
+    * Navigate to the frontend directory.
+    * Install dependencies: `npm install`.
+    * Start the development server: `npm run dev`.
 
 ---
 
-## 👨‍💻 Desenvolvedor
+## 👨‍💻 Developer
 
 **Victor**
-Estudante do **7º termo de Ciência da Computação** na **Unoeste**. 
-Com experiência técnica acumulada no **SENAI** e vivência prática em processos industriais (ex-aprendiz na **ATVOS**). Atualmente focado no desenvolvimento de sistemas ERP e aplicações inovadoras em visão computacional para o esporte.
+**Computer Science Student (7th Term)** at **Unoeste**. 
+Technical background from **SENAI** (Machining Mechanics). Currently focused on developing ERP solutions and innovative **Computer Vision** applications for bodybuilding pose analysis (Senior Project/TCC).
 
 ---
-*Este projeto foi desenvolvido como parte do processo seletivo para a Autoflex.*
+*This project was developed as part of the technical selection process for Autoflex.*
