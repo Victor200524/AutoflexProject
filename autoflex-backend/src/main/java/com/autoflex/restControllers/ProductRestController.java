@@ -35,17 +35,17 @@ public class ProductRestController {
     @PostMapping
     public ResponseEntity<Object> addProduct(@RequestBody Product product){
         Product newProduct = productService.save(product);
-        if(product!=null)
-            return ResponseEntity.status(HttpStatus.CREATED).body(newProduct);
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not save");
+        return ResponseEntity.status(HttpStatus.CREATED).body(newProduct);
     }
 
-    @PutMapping
-    public ResponseEntity<Object> updateProduct(@RequestBody Product product){
-        Product searcedProduct = productService.getById(product.getId());
-        if(searcedProduct != null){
-            searcedProduct = productService.save(product);
-            return ResponseEntity.ok(searcedProduct);
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Object> updateProduct(@PathVariable(name = "id") Long id, @RequestBody Product product){
+        Product searchedProduct = productService.getById(id);
+
+        if(searchedProduct != null){
+            product.setId(id);
+            Product updatedProduct = productService.save(product);
+            return ResponseEntity.ok(updatedProduct);
         }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
     }

@@ -32,6 +32,8 @@ public class RawMaterialService {
     public void deleteRawMaterial(Long id) {
         try {
             rawMaterialRepository.deleteById(id);
-        }catch (Exception e) {}
+        }catch (Exception e) {
+            System.err.println("Erro ao deletar: " + e.getMessage());
+        }
     }
 }

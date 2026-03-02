@@ -1,9 +1,7 @@
 package com.autoflex.entities;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
-@Data
 @Entity
 @Table(name = "raw_material")
 public class RawMaterial {

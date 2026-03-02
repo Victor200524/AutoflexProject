@@ -2,12 +2,10 @@ package com.autoflex.entities;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Embeddable;
-import lombok.Data;
 
 import java.io.Serializable;
 
-@Data
-@Embeddable //class is built-in as key others in entities
+@Embeddable
 public class ProductRawMaterialKey implements Serializable {
 
     @Column(name =  "product_id")

@@ -1,5 +1,6 @@
 package com.autoflex.restControllers;
 
+import com.autoflex.entities.Product;
 import com.autoflex.entities.RawMaterial;
 import com.autoflex.services.RawMaterialService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.swing.text.html.parser.Entity;
 import java.util.List;
 
 @CrossOrigin
@@ -35,10 +35,22 @@ public class RawMaterialRestController {
 
     @PostMapping
     public ResponseEntity<Object> addRawMaterial(@RequestBody RawMaterial rawMaterial){
-        RawMaterial newRawMaterial = rawMaterialService.save(rawMaterial);
-        if(rawMaterial != null)
+        if(rawMaterial != null){
+            RawMaterial newRawMaterial = rawMaterialService.save(rawMaterial);
             return   ResponseEntity.status(HttpStatus.CREATED).body(newRawMaterial);
+        }
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Raw material not found");
+    }
+
+    @PutMapping(value = "/{id}")
+    public ResponseEntity<Object> updateRawMaterial(@PathVariable Long id, @RequestBody RawMaterial rawMaterial){
+        RawMaterial rawMaterial1 = rawMaterialService.getRawMaterialById(id);
+        if(rawMaterial1 != null){
+            rawMaterial.setId(id);
+            rawMaterial1 = rawMaterialService.save(rawMaterial);
+            return ResponseEntity.ok(rawMaterial1);
+        }
+        return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Raw Material not found");
     }
 
     @DeleteMapping(value = "/{id}")

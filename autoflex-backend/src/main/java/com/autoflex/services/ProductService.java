@@ -34,6 +34,8 @@ public class ProductService {
         try{
             productRepository.deleteById(id);
         }
-        catch (Exception e){}
+        catch (Exception e){
+            System.err.println("Erro ao deletar: " + e.getMessage());
+        }
     }
 }
