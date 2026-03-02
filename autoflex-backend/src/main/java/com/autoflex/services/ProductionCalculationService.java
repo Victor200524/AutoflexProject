@@ -47,7 +47,7 @@ public class ProductionCalculationService {
         for (Product product : productsSortedByPrice) {
 
             List<ProductRawMaterial> recipe = productRawMaterialRepository.findByProductId(product.getId());
-            
+
             if (!recipe.isEmpty()) {
 
                 int maxPossibleToMake = Integer.MAX_VALUE;
